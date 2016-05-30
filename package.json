@@ -1,0 +1,52 @@
+{
+  "name": "stylelint-config-kraftvaerk",
+  "description": "kraftvaerk rules for your CSS",
+  "main": "index.js",
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "keywords": [
+    "stylelint",
+    "config",
+    "kraftvaerk",
+    "postcss",
+    "sass",
+    "scss",
+    "css",
+    "code",
+    "quality",
+    "style",
+    "lint",
+    "linter",
+    "scsslint",
+    "sasslint",
+    "validate",
+    "code style",
+    "check",
+    "checker",
+    "verify",
+    "enforce",
+    "hint"
+  ],
+  "engines": {
+    "node": ">=4.2.2"
+  },
+  "repository": "https://github.com/kraftvaerk/eslint-config-kraftvaerk",
+  "author": "kraftvaerk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk/issues"
+  },
+  "homepage": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk#readme",
+  "devDependencies": {
+    "ava": "*"
+  },
+  "peerDependencies": {
+    "stylelint": "^6.5.1"
+  },
+  "scripts": {
+    "kraftvaerk-release": "kraftvaerk-release pre && npm publish && kraftvaerk-release post",
+    "test": "stylelint ./test/**/*.scss"
+  }
+}
