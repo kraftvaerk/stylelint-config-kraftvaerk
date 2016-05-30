@@ -1,6 +1,7 @@
 {
   "name": "stylelint-config-kraftvaerk",
   "description": "kraftvaerk rules for your CSS",
+  "version": "0.0.1",
   "main": "index.js",
   "files": [
     "lib",
@@ -40,13 +41,19 @@
   },
   "homepage": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk#readme",
   "devDependencies": {
-    "ava": "*"
-  },
-  "peerDependencies": {
-    "stylelint": "^6.5.1"
+    "ava": "*",
+    "eslint": "*",
+    "eslint-config-kraftvaerk": "^0.0.4",
+    "is-plain-object": "^2.0.1",
+    "stylelint": "*"
   },
   "scripts": {
-    "kraftvaerk-release": "kraftvaerk-release pre && npm publish && kraftvaerk-release post",
-    "test": "stylelint ./test/**/*.scss"
+    "lint": "eslint . --ignore-path .gitignore",
+    "test": "ava"
+  },
+  "eslintConfig": {
+    "extends": [
+      "kraftvaerk"
+    ]
   }
 }
