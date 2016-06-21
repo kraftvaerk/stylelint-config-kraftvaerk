@@ -33,7 +33,7 @@
   "engines": {
     "node": ">=4.2.2"
   },
-  "repository": "https://github.com/kraftvaerk/eslint-config-kraftvaerk",
+  "repository": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk",
   "author": "kraftvaerk",
   "license": "MIT",
   "bugs": {
