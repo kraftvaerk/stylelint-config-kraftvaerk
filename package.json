@@ -1,7 +1,7 @@
 {
   "name": "stylelint-config-kraftvaerk",
   "description": "kraftvaerk rules for your CSS",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "files": [
     "lib",
