@@ -1,4 +1,3 @@
 {
-  "extends": "./index.js",
-  "ignoreFiles": "node_modules"
+  "extends": "./index.js"
 }
