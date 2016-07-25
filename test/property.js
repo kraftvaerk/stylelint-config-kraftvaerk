@@ -49,9 +49,9 @@ test('There are warnings with invalid properties CSS', t => {
         t.is(warnings[0].text, 'Expected "#FFFFFF" to be "#ffffff" (color-hex-case)', 'correct warning text');
         t.is(warnings[1].text, 'Expected "#FFFFFF" to be "#FFF" (color-hex-length)', 'correct warning text');
         t.is(warnings[2].text, 'Unexpected shorthand "margin" after "margin-left" (declaration-block-no-shorthand-property-overrides)', 'correct warning text');
-        t.is(warnings[3].text, 'Expected single space after ":" with a single-line value (declaration-colon-space-after)', 'correct warning text');
-        t.is(warnings[4].text, 'Expected property "margin-left" to come before property "background" (declaration-block-properties-order)', 'correct warning text');
-        t.is(warnings[5].text, 'Expected property "margin" to come before property "margin-left" (declaration-block-properties-order)', 'correct warning text');
+        t.is(warnings[3].text, 'Expected single space after ":" with a single-line declaration (declaration-colon-space-after)', 'correct warning text');
+        t.is(warnings[4].text, 'Expected "margin-left" to come before "background" (declaration-block-properties-order)', 'correct warning text');
+        t.is(warnings[5].text, 'Expected "margin" to come before "margin-left" (declaration-block-properties-order)', 'correct warning text');
         t.is(warnings[6].text, 'Expected "PX" to be "px" (unit-case)', 'correct warning text');
     });
 });
