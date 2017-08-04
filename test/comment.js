@@ -47,7 +47,7 @@ const invalidCss = (`
 * Description of section, whether or not it has media queries, long comments
 * should manually break the line length at 80 characters.
 */
-.selector {
+.selector-1 {
     float: right;
 }
 /* This is a comment about this selector */
@@ -62,8 +62,7 @@ test('There are no warnings with commenting CSS', t => {
     return stylelint.lint({
         code: validCss,
         config: config
-    })
-    .then(data => {
+    }).then(data => {
         const { errored, results } = data;
         const { warnings } = results[0];
 
@@ -76,13 +75,12 @@ test('There are warnings with invalid commenting CSS', t => {
     return stylelint.lint({
         code: invalidCss,
         config: config
-    })
-    .then(data => {
+    }).then(data => {
         const { errored, results } = data;
         const { warnings } = results[0];
 
         t.truthy(errored, 'errored');
-        t.is(warnings.length, 3, 'flags eight warnings');
+        t.is(warnings.length, 2, 'flags eight warnings');
         t.is(warnings[0].text, 'Expected empty line before comment (comment-empty-line-before)', 'correct warning text');
         t.is(warnings[1].text, 'Expected empty line before comment (comment-empty-line-before)', 'correct warning text');
     });

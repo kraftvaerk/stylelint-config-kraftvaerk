@@ -24,8 +24,7 @@ test('no warnings with valid css', t => {
     return stylelint.lint({
         code: validCss,
         config: config
-    })
-    .then(data => {
+    }).then(data => {
         const { errored, results } = data;
         const { warnings } = results[0];
 
@@ -38,8 +37,7 @@ test('a warning with invalid css', t => {
     return stylelint.lint({
         code: invalidCss,
         config: config
-    })
-    .then(data => {
+    }).then(data => {
         const { errored, results } = data;
         const { warnings } = results[0];
 

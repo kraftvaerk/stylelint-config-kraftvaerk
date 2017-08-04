@@ -28,8 +28,7 @@ test('There are no warnings with selectors CSS', t => {
     return stylelint.lint({
         code: validCss,
         config: config
-    })
-    .then(data => {
+    }).then(data => {
         const { errored, results } = data;
         const { warnings } = results[0];
 
@@ -42,15 +41,14 @@ test('There are warnings with invalid selectors CSS', t => {
     return stylelint.lint({
         code: invalidCss,
         config: config
-    })
-    .then(data => {
+    }).then(data => {
         const { errored, results } = data;
         const { warnings } = results[0];
 
         t.truthy(errored, 'errored');
         t.is(warnings.length, 2, 'flags eight warnings');
         t.is(warnings[0].text, 'Expected class selector ".selectorClass" to match specified pattern (selector-class-pattern)', 'correct warning text');
-        t.is(warnings[1].text, 'Unexpected id selector (selector-no-id)', 'correct warning text');
+        t.is(warnings[1].text, 'Expected "#selectorId" to have no more than 0 id selectors (selector-max-id)', 'correct warning text');
     });
 });
 

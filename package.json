@@ -1,10 +1,9 @@
 {
   "name": "stylelint-config-kraftvaerk",
   "description": "kraftvaerk rules for your CSS",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "files": [
-    "lib",
     "index.js"
   ],
   "keywords": [
@@ -31,7 +30,7 @@
     "hint"
   ],
   "engines": {
-    "node": ">=4.2.2"
+    "node": ">=8.1.2"
   },
   "repository": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk",
   "author": "kraftvaerk",
@@ -55,5 +54,9 @@
     "extends": [
       "kraftvaerk"
     ]
+  },
+  "dependencies": {
+    "stylelint-config-standard": "17.0.0",
+    "stylelint-order": "0.6.0"
   }
 }
