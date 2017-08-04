@@ -7,6 +7,15 @@ module.exports = {
     ],
     rules: Object.assign({},
         {
+            'at-rule-empty-line-before': [ 'always', {
+                except: [
+                    'blockless-after-same-name-blockless',
+                    'first-nested'
+                ],
+                ignore: ['after-comment', 'inside-block', 'blockless-after-same-name-blockless', 'blockless-after-blockless']
+            }],
+            'at-rule-no-unknown': null,
+
             'color-named': 'never',
 
             'font-family-name-quotes': 'always-where-required',
@@ -35,6 +44,7 @@ module.exports = {
             'value-no-vendor-prefix': true,
 
             'shorthand-property-no-redundant-values': null,
+            'declaration-block-no-redundant-longhand-properties': null,
 
             'order/properties-order': [
                 'content',
