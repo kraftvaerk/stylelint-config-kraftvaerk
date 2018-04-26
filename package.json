@@ -1,11 +1,7 @@
 {
   "name": "stylelint-config-kraftvaerk",
-  "description": "kraftvaerk rules for your CSS",
   "version": "2.0.1",
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
+  "description": "Kraftvaerk's shareable config for stylelint",
   "keywords": [
     "stylelint",
     "config",
@@ -29,34 +25,37 @@
     "enforce",
     "hint"
   ],
-  "engines": {
-    "node": ">=8.1.2"
-  },
-  "repository": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk",
-  "author": "kraftvaerk",
-  "license": "MIT",
+  "homepage": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk",
   "bugs": {
     "url": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk/issues"
   },
-  "homepage": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk#readme",
-  "devDependencies": {
-    "ava": "*",
-    "eslint": "*",
-    "eslint-config-kraftvaerk": "^0.0.4",
-    "is-plain-object": "^2.0.1",
-    "stylelint": "*"
+  "license": "MIT",
+  "author": {
+    "name": "Kraftvaerk",
+    "url": "http://www.kraftvaerk.com/"
   },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": "kraftvaerk/stylelint-config-kraftvaerk",
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
     "test": "ava"
   },
-  "eslintConfig": {
-    "extends": [
-      "kraftvaerk"
-    ]
-  },
   "dependencies": {
     "stylelint-config-standard": "17.0.0",
     "stylelint-order": "0.6.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "eslint-config-kraftvaerk": "^0.0.5",
+    "eslint": "*",
+    "is-plain-object": "^2.0.4",
+    "stylelint": "*"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
   }
 }
