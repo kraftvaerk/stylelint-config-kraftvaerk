@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/kraftvaerk/stylelint-config-kraftvaerk/master.svg?style=flat-square)](https://travis-ci.org/kraftvaerk/stylelint-config-kraftvaerk) [![npm Version](https://img.shields.io/npm/v/stylelint-config-kraftvaerk.svg?style=flat-square)](https://www.npmjs.com/package/stylelint-config-kraftvaerk) [![npm Downloads](https://img.shields.io/npm/dm/stylelint-config-kraftvaerk.svg?style=flat-square)](https://www.npmjs.com/package/stylelint-config-kraftvaerk) [![devDependency Status](https://img.shields.io/david/dev/kraftvaerk/stylelint-config-kraftvaerk.svg?style=flat-square)](https://david-dm.org/kraftvaerk/stylelint-config-kraftvaerk/?type=dev)
 
-> Kraftvaerk's shareable config for stylelint
+> stylelint shareable config for the Kraftvaerk CSS style guide
 
 ## Rules for your CSS
 
