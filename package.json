@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-kraftvaerk",
-  "description": "kraftvaerk rules for your CSS",
+  "description": "stylelint shareable config for the Kraftvaerk CSS style guide",
   "version": "2.0.1",
   "main": "index.js",
   "files": [
