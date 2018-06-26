@@ -1,11 +1,7 @@
 {
   "name": "stylelint-config-kraftvaerk",
-  "description": "stylelint shareable config for the Kraftvaerk CSS style guide",
   "version": "2.0.1",
-  "main": "index.js",
-  "files": [
-    "index.js"
-  ],
+  "description": "stylelint shareable config for the Kraftvaerk CSS style guide",
   "keywords": [
     "stylelint",
     "config",
@@ -29,34 +25,47 @@
     "enforce",
     "hint"
   ],
-  "engines": {
-    "node": ">=8.1.2"
-  },
-  "repository": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk",
-  "author": "kraftvaerk",
-  "license": "MIT",
+  "homepage": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk",
   "bugs": {
     "url": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk/issues"
   },
-  "homepage": "https://github.com/kraftvaerk/stylelint-config-kraftvaerk#readme",
-  "devDependencies": {
-    "ava": "*",
-    "eslint": "*",
-    "eslint-config-kraftvaerk": "^0.0.4",
-    "is-plain-object": "^2.0.1",
-    "stylelint": "*"
+  "license": "MIT",
+  "author": {
+    "name": "Kraftvaerk",
+    "url": "http://www.kraftvaerk.com/"
   },
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": "kraftvaerk/stylelint-config-kraftvaerk",
   "scripts": {
-    "lint": "eslint . --ignore-path .gitignore",
-    "test": "ava"
-  },
-  "eslintConfig": {
-    "extends": [
-      "kraftvaerk"
-    ]
+    "lint": "eslint .",
+    "test": "jest"
   },
   "dependencies": {
     "stylelint-config-standard": "17.0.0",
     "stylelint-order": "0.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-transform-modules-commonjs": "latest",
+    "@babel/preset-env": "latest",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.2.0",
+    "eslint-config-kraftvaerk": "^0.0.5",
+    "eslint": "^5.0.1",
+    "is-plain-object": "^2.0.4",
+    "jest": "^23.2.0",
+    "regenerator-runtime": "^0.12.0",
+    "stylelint": "^9.2.0"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  },
+  "jest": {
+    "testRegex": "/__tests__/.*\\.test\\.js$",
+    "verbose": true
   }
 }
