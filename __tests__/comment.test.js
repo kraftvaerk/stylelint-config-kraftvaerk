@@ -1,6 +1,8 @@
-import stylelint from 'stylelint';
-import getFlatLinterResult from './utils/getFlatLinterResult';
-import config from '../';
+'use strict';
+
+const stylelint = require('stylelint');
+const getFlatLinterResult = require('./utils/getFlatLinterResult');
+const config = require('../');
 
 const validCSS = `
 /**

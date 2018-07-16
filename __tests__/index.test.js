@@ -1,7 +1,9 @@
-import isPlainObj from 'is-plain-object';
-import stylelint from 'stylelint';
-import getFlatLinterResult from './utils/getFlatLinterResult';
-import config from '../';
+'use strict';
+
+const isPlainObject = require('is-plain-object');
+const stylelint = require('stylelint');
+const getFlatLinterResult = require('./utils/getFlatLinterResult');
+const config = require('../');
 
 const validCSS = `
 a {
@@ -16,7 +18,7 @@ a {
 `;
 
 it('has valid config format', () => {
-    expect(isPlainObj(config)).toBeTruthy();
+    expect(isPlainObject(config)).toBeTruthy();
 });
 
 it('has no warnings with valid CSS', async () => {
