@@ -8,8 +8,8 @@ const validCSS = `
 .selector {
     margin: 0;
     margin-left: 20px;
-    border-color: #fff;
     background: #fff;
+    border-color: #fff;
     opacity: .5;
 }
 `;
@@ -18,8 +18,8 @@ const invalidCSS = `
 .selector {
     margin:0;
     margin-left: 20PX;
-    border-color: #FFFFFF;
     background: #FFF;
+    border-color: #FFFFFF;
     opacity: 0.5
 }
 `;
@@ -62,8 +62,8 @@ describe('invalid CSS', () => {
     });
 
     it('has invalid hex color case', () => {
-        expect(warnings[1].text).toBe('Expected "#FFFFFF" to be "#ffffff" (color-hex-case)');
-        expect(warnings[2].text).toBe('Expected "#FFF" to be "#fff" (color-hex-case)');
+        expect(warnings[1].text).toBe('Expected "#FFF" to be "#fff" (color-hex-case)');
+        expect(warnings[2].text).toBe('Expected "#FFFFFF" to be "#ffffff" (color-hex-case)');
     });
 
     it('has invalid hex color length', () => {
