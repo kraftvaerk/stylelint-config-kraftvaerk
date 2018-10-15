@@ -8,9 +8,9 @@ const validCSS = `
 .selector {
     margin: 0;
     margin-left: 20px;
+    opacity: .5;
     border-color: #fff;
     background: #fff;
-    opacity: .5;
 }
 `;
 
@@ -18,9 +18,9 @@ const invalidCSS = `
 .selector {
     margin:0;
     margin-left: 20PX;
+    opacity: 0.5;
     border-color: #FFFFFF;
-    background: #FFF;
-    opacity: 0.5
+    background: #FFF
 }
 `;
 
