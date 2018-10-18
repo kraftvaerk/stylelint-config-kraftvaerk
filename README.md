@@ -11,16 +11,16 @@ Code should always be written in such a way that makes it look like a single per
 ## Installation
 
 ```
-npm install --save-dev stylelint stylelint-config-kraftvaerk
+npm install --save-dev stylelint @kraftvaerk/stylelint-config
 ```
 
 ## Usage
 
-To use it set your `extends` property in `.stylelintrc` to `stylelint-config-kraftvaerk`.
+To use it set your `extends` property in `.stylelintrc` to `@kraftvaerk/stylelint-config`.
 
 ```json
 {
-  "extends": "stylelint-config-kraftvaerk"
+  "extends": "@kraftvaerk/stylelint-config"
 }
 ```
 
