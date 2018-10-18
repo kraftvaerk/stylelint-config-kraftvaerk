@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-kraftvaerk",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "stylelint shareable config for the Kraftvaerk CSS style guide",
   "keywords": [
     "stylelint",
