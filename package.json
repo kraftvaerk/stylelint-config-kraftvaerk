@@ -45,13 +45,13 @@
   },
   "dependencies": {
     "stylelint-config-standard": "18.2.0",
-    "stylelint-order": "1.0.0"
+    "stylelint-order": "2.1.0"
   },
   "devDependencies": {
     "eslint-config-kraftvaerk": "^0.0.5",
     "eslint": "^5.6.1",
     "is-plain-object": "^2.0.4",
-    "jest": "^23.6.0",
+    "jest": "^24.6.0",
     "stylelint": "^9.6.0"
   },
   "engines": {
