@@ -1,6 +1,6 @@
 'use strict';
 
-const isPlainObject = require('is-plain-object');
+const { isPlainObject } = require('is-plain-object');
 const stylelint = require('stylelint');
 const getFlatLinterResult = require('./utils/getFlatLinterResult');
 const config = require('../');

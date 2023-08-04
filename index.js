@@ -258,6 +258,7 @@ module.exports = {
             'page-break-inside'
         ],
         'selector-class-pattern': [/^(.)?([a-z0-9](-[a-z0-9])?)+(__([a-z0-9].?)+)?(--([a-z0-9].?)+)?$/, { resolveNestedSelectors: true }],
+        'selector-id-pattern': null,
         'selector-list-comma-newline-before': 'never-multi-line',
         'selector-list-comma-space-after': 'always-single-line',
         'selector-max-id': 0,
