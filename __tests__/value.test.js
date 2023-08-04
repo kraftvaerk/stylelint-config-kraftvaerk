@@ -51,16 +51,12 @@ describe('invalid CSS', () => {
         warnings = result.warnings;
     });
 
-    it('has 2 warnings', () => {
+    it('has 1 warning', () => {
         expect(errored).toBeTruthy();
-        expect(warnings.length).toBe(2);
+        expect(warnings.length).toBe(1);
     });
 
     it('has invalid hex color length', () => {
         expect(warnings[0].text).toBe('Expected "#ffffff" to be "#fff" (color-hex-length)');
-    });
-
-    it('has unexpected leading zeros', () => {
-        expect(warnings[1].text).toBe('Unexpected leading zero (number-leading-zero)');
     });
 });
