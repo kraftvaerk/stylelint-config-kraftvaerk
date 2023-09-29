@@ -2,8 +2,9 @@
 
 module.exports = {
     extends: 'stylelint-config-standard-scss',
-    plugins: ['stylelint-order'],
+    plugins: ['stylelint-order', 'stylelint-prettier'],
     rules: {
+        'prettier/prettier': true,
         'at-rule-empty-line-before': ['always', {
             except: [
                 'blockless-after-same-name-blockless',
