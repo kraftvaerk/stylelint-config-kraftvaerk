@@ -1,9 +1,10 @@
 'use strict';
 
 module.exports = {
-    extends: 'stylelint-config-standard',
-    plugins: ['stylelint-order'],
+    extends: 'stylelint-config-standard-scss',
+    plugins: ['stylelint-order', 'stylelint-prettier'],
     rules: {
+        'prettier/prettier': true,
         'at-rule-empty-line-before': ['always', {
             except: [
                 'blockless-after-same-name-blockless',
@@ -20,11 +21,8 @@ module.exports = {
         'color-named': 'never',
         'font-family-name-quotes': 'always-where-recommended',
         'function-url-quotes': 'always',
-        'indentation': 4,
-        'max-empty-lines': 1,
         'max-nesting-depth': 3,
         'no-unknown-animations': true,
-        'number-leading-zero': 'never',
         'order/properties-order': [
             'content',
             'speak',
@@ -258,10 +256,8 @@ module.exports = {
             'page-break-inside'
         ],
         'selector-class-pattern': [/^(.)?([a-z0-9](-[a-z0-9])?)+(__([a-z0-9].?)+)?(--([a-z0-9].?)+)?$/, { resolveNestedSelectors: true }],
-        'selector-list-comma-newline-before': 'never-multi-line',
-        'selector-list-comma-space-after': 'always-single-line',
+        'selector-id-pattern': null,
         'selector-max-id': 0,
-        'string-quotes': 'single',
         'value-keyword-case': 'lower',
         'value-no-vendor-prefix': true
     }

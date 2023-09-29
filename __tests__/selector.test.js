@@ -44,7 +44,7 @@ describe('invalid CSS', () => {
     let errored = null;
     let warnings = null;
 
-    beforeAll(async (done) => {
+    beforeAll(async () => {
         const result = getFlatLinterResult(await stylelint.lint({
             config,
             code: invalidCSS
@@ -52,8 +52,6 @@ describe('invalid CSS', () => {
 
         errored = result.errored;
         warnings = result.warnings;
-
-        done();
     });
 
     it('has 4 warnings', () => {
@@ -62,17 +60,17 @@ describe('invalid CSS', () => {
     });
 
     it('has invalid class names', () => {
-        const message = 'Expected class selector ".selectorClass" to match specified pattern (selector-class-pattern)';
+        const message = 'Expected \".selectorClass\" to match pattern \"/^(.)?([a-z0-9](-[a-z0-9])?)+(__([a-z0-9].?)+)?(--([a-z0-9].?)+)?$/\" (selector-class-pattern)';
 
-        expect(warnings[0].text).toBe(message);
         expect(warnings[1].text).toBe(message);
+        expect(warnings[2].text).toBe(message);
     });
 
     it('has id selectors', () => {
-        expect(warnings[2].text).toBe('Expected "#selectorId" to have no more than 0 ID selectors (selector-max-id)');
+        expect(warnings[3].text).toBe('Expected "#selectorId" to have no more than 0 ID selectors (selector-max-id)');
     });
 
     it('has duplicate selectors', () => {
-        expect(warnings[3].text).toBe('Unexpected duplicate selector ".selectorClass", first used at line 6 (no-duplicate-selectors)');
+        expect(warnings[0].text).toBe('Unexpected duplicate selector ".selectorClass", first used at line 6 (no-duplicate-selectors)');
     });
 });

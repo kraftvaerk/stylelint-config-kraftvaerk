@@ -16,11 +16,11 @@ const validCSS = `
 
 const invalidCSS = `
 .selector {
-    margin:0;
-    margin-left: 20PX;
+    margin: 0;
+    margin-left: 20px;
     opacity: 0.5;
-    border-color: #FFFFFF;
-    background: #FFF
+    border-color: #ffffff;
+    background: #fff;
 }
 `;
 
@@ -40,41 +40,23 @@ describe('invalid CSS', () => {
     let errored = null;
     let warnings = null;
 
-    beforeAll(async (done) => {
-        const result = getFlatLinterResult(await stylelint.lint({
+    beforeAll(async () => {
+        const linterResult = await stylelint.lint({
             config,
             code: invalidCSS
-        }));
+        });
+        const result = getFlatLinterResult(linterResult);
 
         errored = result.errored;
         warnings = result.warnings;
-
-        done();
     });
 
-    it('has 7 warnings', () => {
+    it('has 1 warning', () => {
         expect(errored).toBeTruthy();
-        expect(warnings.length).toBe(7);
-    });
-
-    it('has unexpected leading zeros', () => {
-        expect(warnings[0].text).toBe('Unexpected leading zero (number-leading-zero)');
-    });
-
-    it('has invalid hex color case', () => {
-        expect(warnings[1].text).toBe('Expected "#FFFFFF" to be "#ffffff" (color-hex-case)');
-        expect(warnings[2].text).toBe('Expected "#FFF" to be "#fff" (color-hex-case)');
+        expect(warnings.length).toBe(1);
     });
 
     it('has invalid hex color length', () => {
-        expect(warnings[3].text).toBe('Expected "#FFFFFF" to be "#FFF" (color-hex-length)');
-    });
-
-    it('has no trailing semicolons after property values', () => {
-        expect(warnings[4].text).toBe('Expected a trailing semicolon (declaration-block-trailing-semicolon)');
-    });
-
-    it('has no spaces before property values', () => {
-        expect(warnings[5].text).toBe('Expected single space after ":" with a single-line declaration (declaration-colon-space-after)');
+        expect(warnings[0].text).toBe('Expected "#ffffff" to be "#fff" (color-hex-length)');
     });
 });

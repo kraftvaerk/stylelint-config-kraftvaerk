@@ -36,7 +36,7 @@ describe('invalid CSS', () => {
     let errored = null;
     let warnings = null;
 
-    beforeAll(async (done) => {
+    beforeAll(async () => {
         const result = getFlatLinterResult(await stylelint.lint({
             config,
             code: invalidCSS
@@ -44,8 +44,6 @@ describe('invalid CSS', () => {
 
         errored = result.errored;
         warnings = result.warnings;
-
-        done();
     });
 
     it('has 3 warnings', () => {

@@ -26,4 +26,4 @@ To use it set your `extends` property in `.stylelintrc` to `@kraftvaerk/stylelin
 
 ## License
 
-MIT © [Mithun Dhiman](http://mi2oon.com/)
+MIT © [Kraftvaerk](https://kraftvaerk.com/)
